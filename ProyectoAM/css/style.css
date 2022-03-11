@@ -1,0 +1,128 @@
+:root {
+    --blanco : #FFFFFF;
+    --negro: #000000;
+    --gris : #373030;
+    --font-prin:'Graduate', cursive;
+    --font-sec:'Courgette', cursive;
+
+}
+/*Globales*/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box; /*Hack para Box Model*/
+}
+
+*, *:before, *:after {  /* con *  aplicas a todos los elementos*/
+  box-sizing: inherit;
+}
+body{
+    width: 100%;
+    font-size: 1.6rem; /* 1 rem=10px*/
+    font-family: var(--font-principal);
+     background-image: linear-gradient(to top,#597e8d,var(--blanco) 100%);
+}
+h1{
+    font-size: 3.8rem;
+    font-family: var(--font-prin);
+}
+
+h2{
+    font-size: 5.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h3{
+    text-align: center;
+
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto 0 auto;
+    
+}
+
+/*Navegación*/
+.nav-bg{
+    background-color: var(--negro);
+}
+.nav-principal{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   
+}
+ 
+.nav-principal a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-top: 1rem; 
+    font-family: var(--font-prin);
+}
+ul {
+    list-style: none;
+}
+.nav-principal li {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+.nav-principal > li{
+    float: left;
+}
+.nav-principal li ul{
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+.nav-principal a:hover {
+        background-color: var(--blanco);
+        color: var(--gris);
+}
+/*Boton*/
+.boton{
+    display: inline-block;
+    width: 200px;
+    padding: 8px;
+    color: var(--negro);
+    border: 2px solid var(--negro);
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    transition: background-color 0.2s ease-out,
+                color 0.2s ease-out;
+}
+.boton{
+        cursor: pointer;
+}
+/*Pie de Pagina*/
+.pie{
+    background-color: #498eaa ;
+    font-family: var(--font-sec);
+    height: 10rem;
+    text-align: right;
+    padding: 2rem;
+    margin-top: 10rem;
+}
+
+/*media queries*/
+@media(min-width: 769px){
+    .nav-principal{
+        flex-direction: row;
+        justify-content: space-between;  
+    }
+    .nav-principal li a{
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+    
+    }
+    .nav-principal li:hover > ul{
+        display: block;
+    
+    }
+    .buton{
+        width: auto;
+    }
+}

@@ -1,0 +1,68 @@
+:root{
+    --blanco : #FFFFFF;
+    --negro: #000000;
+    --gris : #373030;
+    --azul: #02006e; 
+    --font-prin:'Graduate', cursive;
+    --font-sec:'Courgette', cursive;
+    --font-lib:'Staatliches', cursive;
+    --font-desc:'Raleway', sans-serif;
+}
+
+/*Libros*/
+.contenedor{
+    max-width: 100rem;
+    margin: 0 auto;
+}
+img{
+    max-width: 30rem;
+    max-height: 55rem;
+    background-size:cover;
+    padding: 2rem 3rem;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding-top: 5rem;
+    padding-left: 3rem;
+    
+}
+.plantillas{
+    background-color:  rgb(102 110 248 /60%) ;
+    max-width: 35rem;
+    padding: 1rem;
+    border: 3px solid var(--azul);
+   
+    
+}
+.plantillas__nombr{
+   font-size: 4rem;
+   color: var(--azul);
+   text-align: center;
+   font-family: var(--font-prin);
+   line-height: 5rem;
+}
+
+.plantillas a{
+    text-decoration: none;
+}
+
+/*media queries*/
+@media(min-width: 769px){
+
+    img{
+        max-width: 45rem;
+    }
+    .plantillas{
+        max-width: 45rem;
+    }
+}
+@media(max-width: 767px){
+
+    img{
+        max-width: 30rem;
+    }
+    .plantillas{
+        max-width: 35rem;
+    }
+}
